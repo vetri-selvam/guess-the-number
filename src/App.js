@@ -3,7 +3,7 @@ import './App.css';
 import { useState } from 'react';
 import Result from './Result';  
 
-const secretNum = Math.floor(Math.random *10) +1;
+const secretNum = Math.floor(Math.random() *10) +1;
 function App() {
   const [term, setTerm] = useState("");
   
@@ -24,8 +24,9 @@ function App() {
           type='text'
           onChange={handleChange}
         />
+        <Result secretNum={secretNum} term={term}/>
       </div>
-      <Result/>
+      
     </div>
   );
 }
